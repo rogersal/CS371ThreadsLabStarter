@@ -36,6 +36,8 @@ public class StarAnimation extends Animation {
         for(int i = 0; i < INIT_STAR_COUNT; ++i) {
             addStar();
         }
+        StarThread s = new StarThread(this);
+        s.start();
     }
 
     /** adds a randomly located star to the field */

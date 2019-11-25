@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 
+import java.util.InvalidPropertiesFormatException;
+
 /**
  * This application displays several animations.  It is used for the threads lab in CS371.
  *
@@ -36,6 +38,8 @@ public class MainActivity extends Activity
         //Let me know when someone adjusts the seekbar
         theSeekBar = (SeekBar)findViewById(R.id.seekBar);
         theSeekBar.setOnSeekBarChangeListener(this);
+        InvalidateThread t = new InvalidateThread(myAV);
+        t.start();
     }//onClick
 
     @Override
